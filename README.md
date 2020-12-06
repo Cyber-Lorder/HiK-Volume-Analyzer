@@ -1,2 +1,2 @@
 # Volume-Analyzer-BOT
-Geliştirilme aşamasında. 
+Geliştirme aşamasında .
