@@ -19,9 +19,6 @@ for i in range(1, 16):
     coinler = (driver.find_element_by_xpath(
         """/html/body/div[1]/div[1]/main/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[""" + str(
             i) + """]/div/div[2]""")).text
-    yuzdelik_gunluk = (driver.find_element_by_xpath(
-        """/html/body/div[1]/div[1]/main/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[""" + str(
-            i) + """]/div/div[4]""")).text
     volume_gunluk = (driver.find_element_by_xpath(
         """/html/body/div[1]/div[1]/main/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[""" + str(
             i) + """]/div/div[8]""")).text
