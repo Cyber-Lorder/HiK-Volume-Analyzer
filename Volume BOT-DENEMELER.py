@@ -7,8 +7,18 @@ from datetime import date, timedelta
 
 driver= webdriver.Chrome(executable_path="chromedriver.exe")
 driver.get("https://www.binance.com/en/markets")
+btcbutton = driver.find_element_by_xpath(
+	"/html/body/div[1]/div[1]/main/div/div[2]/div/div/div[2]/div[1]/div[1]/div/button[3]")
+btcbutton.click()
+bilgiler = []
+"""for i in range(5):
+	html = driver.find_element_by_tag_name('html')
+	html.send_keys(Keys.PAGE_DOWN)
 
-bilgiler=[]
+Burada sayfayı aşşağıya kaydırarak diğer coinlere ulaşmayı denedim.
+sayfayı aşşağıya kaydırma çalışıyor fakat bizim işimize yaramadı.	
+	"""
+
 
 for i in range(1,16):
 	coinler = (driver.find_element_by_xpath( """/html/body/div[1]/div[1]/main/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div["""+str(i)+"""]/div/div[2]""")).text
