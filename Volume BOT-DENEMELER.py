@@ -10,9 +10,6 @@ bilgiler = []
 """for i in range(5):
 	html = driver.find_element_by_tag_name('html')
 	html.send_keys(Keys.PAGE_DOWN)
-
-Burada sayfayı aşşağıya kaydırarak diğer coinlere ulaşmayı denedim.
-sayfayı aşşağıya kaydırma çalışıyor fakat bizim işimize yaramadı.	
 	"""
 
 for i in range(1, 16):
@@ -26,8 +23,10 @@ for i in range(1, 16):
         """/html/body/div[1]/div[1]/main/div/div[2]/div/div/div[2]/div[2]/div/div[2]/div/div/div[""" + str(
             i) + """]/div/div[3]/div[2]""")).text
 
-    satir = ["coinler=", coinler, "24Saatlik HACİM", volume_gunluk, "fiyat", deger_usd]
+    satir = ["coinler=", coinler, "24Saatlik HACİM",  volume_gunluk, "fiyat", deger_usd]
     bilgiler.append(satir)
+
+
 
 with open('binanceVOLUMEdeneme.csv', 'a', newline='', encoding='utf-8') as f:
     w = csv.writer(f, delimiter='\n')
